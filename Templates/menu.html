@@ -1,0 +1,88 @@
+<style>
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 19vh;
+    background-color: rgb(0 0 0 / 83%);
+    font-family: "Montserrat", sans-serif;
+}
+
+.heading {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 20px;
+    padding: 14px 16px;
+}
+
+.nav-links a:hover:not(.active) {
+    background-color: rgb(86, 88, 88);
+}
+
+.nav-links li a.active {
+    background-color: rgba(3, 124, 124, 0.826);
+}
+
+.contact {
+    position: absolute;
+    display: block;
+    right: 36px;
+    top: 22px;
+    color: white;
+    font-size: 16px;
+}
+
+.contact a {
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+
+.contact :hover {
+    color: rgba(1, 241, 241, 0.826);
+}
+
+.left {
+    position: absolute;
+    left: 34px;
+    top: 25px;
+}
+
+.left img {
+    height: 112px;
+    padding: 0px 0px;
+    float: left;
+    background-color: transparent;
+    margin: 0px 107px;
+}
+</style>
+    
+    <div class="contact">
+        <i class='far fa-user-circle' style='font-size:24px'><a href="/login/">Log in</a></i>
+        <br>
+        <br>
+        <i class='fas fa-award' style='font-size:24px'><a href="/memform/">Membership</a></i>
+
+    </div>
+    <div class="left">
+        <img
+            src="https://play-lh.googleusercontent.com/Oz7RMqxhjiI-KlMYUqf50Fs3fkpzulD_jyb6qXN_ePM_xQcx1_3PaCgVGI9Q4d47TRQ">
+    </div>

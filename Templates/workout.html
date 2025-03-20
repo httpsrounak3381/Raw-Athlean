@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Workout Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+    <link href="{% static 'css1/styles.css' %}" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    body {
+        background-color: rgba(34, 32, 32, 0.778);
+        background-image: url(https://www.rofitness.co.uk/wp-content/uploads/2020/12/8T0A1015-scaled-e1608043063720.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .para h2 {
+        font-size: 180%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    .container2 {
+
+        height: 80vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cards {
+        border: 2px solid white;
+        border-radius: 30px;
+        height: 100vh;
+        width: 30%;
+        padding: 1.5rem;
+        font-family: 'Bebas Neue', sans-serif;
+    }
+
+    .two_card {
+        margin-right: 5rem;
+    }
+
+    .heading1 {
+        font-size: 2.5rem;
+        line-height: 60px;
+        margin-bottom: 1rem;
+        color: #f5b9b9;
+    }
+
+    .para1 {
+        font-size: 1.6rem;
+        font-weight: none;
+        margin-bottom: 1rem;
+    }
+
+    .para2 {
+        font-size: 1.2rem;
+        font-weight: none;
+        margin-bottom: 1rem;
+        color: #784646;
+    }
+
+    .para {
+        margin-bottom: 10%;
+    }
+</style>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3" href="index.html">Dashboard</a>
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
+                class="fas fa-bars"></i></button>
+        <!-- Navbar Search-->
+        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..."
+                    aria-describedby="btnNavbarSearch" />
+                <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i
+                        class="fas fa-search"></i></button>
+            </div>
+        </form>
+        <!-- Navbar-->
+        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#!">Settings</a></li>
+                    <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li><a class="dropdown-item" href="#!">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <div class="sb-sidenav-menu-heading">Core</div>
+                        <a class="nav-link" href="/homedash/">
+                            <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
+                            HOME
+                        </a>
+                        <a class="nav-link" href="/dashboard/">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            User Dashboard
+                        </a>
+                        <div class="sb-sidenav-menu-heading">Interface</div>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                            Layouts
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="/membership/"><i class="fas fa-handshake"></i> Membership</a>
+                                <a class="nav-link" href="/personaldash/"><i class="fas fa-user-tie"></i>Personal
+                                    Trainers</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="	fas fa-calendar-alt"></i></div>
+                            Sechdule
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="/workout/"><i class="	fas fa-running"></i>Workout Plan</a>
+                                <a class="nav-link" href="/diet/"><i class="	fas fa-hamburger"></i>Diet Chart</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid px-4"
+                    style="color: white; font-family: 'Times New Roman', Times, serif; text-align: center;">
+                    <u>
+                        <h1 class="mt-4">RAW ATHLEAN</h1>
+                    </u>
+                    <br><br>
+
+                    <div class="para">
+                        <p>
+                        <h2>7-DAY Workout Routine</h2>
+                        </p>
+                    </div>
+                    <div class="container2">
+                        <div class="cards two_card">
+                            <p class="heading1">SWEAT IT OUT</p>
+                            <p class="para1">Monday</p>
+                            <i class='fas fa-dumbbell' style='font-size:24px'></i>
+                            <p class="para2">Strenght Training</p>
+                            <p class="para1">Tuesday</p>
+                            <i class='fas fa-skating' style='font-size:24px'></i>
+                            <p class="para2">Hiit Class</p>
+                            <p class="para1">Wednesday</p>
+                            <i class='	fas fa-fire-alt' style='font-size:24px'></i>
+                            <p class="para2">Yoga Class</p>
+                            <p class="para1">Thusday</p>
+                            <p class="para2">Strenght Training</p>
+                            <i class='fas fa-dumbbell' style='font-size:24px'></i>
+                            <p class="para1">Friday</p>
+                            <i class='	fas fa-running' style='font-size:24px'></i>
+                            <p class="para2">Long Walk</p>
+                            <p class="para1">Saturday</p>
+                            <i class='		fas fa-wind' style='font-size:24px'></i>
+                            <p class="para2">Boxing Class</p>
+                            <p class="para1">Sunday</p>
+                            <i class='	fas fa-fire-alt' style='font-size:24px'></i>
+                            <p class="para2">Yoga Class</p>
+                        </div>
+                        <div class="cards two_card">
+                            <p class="heading1">BUILD STRENGTH</p>
+                            <p class="para1">Monday</p>
+                            <i class='		fas fa-skiing-nordic' style='font-size:24px'></i>
+                            <p class="para2">Mobility Class</p>
+                            <p class="para1">Tuesday</p>
+                            <i class='		fas fa-skating' style='font-size:24px'></i>
+                            <p class="para2">Hiit Class</p>
+                            <p class="para1">Wednesday</p>
+                            <i class='	fas fa-fire-alt' style='font-size:24px'></i>
+                            <p class="para2">Yoga Class</p>
+                            <p class="para1">Thusday</p>
+                            <i class='fas fa-dumbbell' style='font-size:24px'></i>
+                            <p class="para2">Strenght Training</p>
+                            <p class="para1">Friday</p>
+                            <i class='	fas fa-running' style='font-size:24px'></i>
+                            <p class="para2">Long Walk</p>
+                            <p class="para1">Saturday</p>
+                            <i class='		fas fa-skating' style='font-size:24px'></i>
+                            <p class="para2">Hiit Class</p>
+                            <p class="para1">Sunday</p>
+                            <i class='fas fa-dumbbell' style='font-size:24px'></i>
+                            <p class="para2">strenght training</p>
+                        </div>
+                    </div>
+
+
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+                        crossorigin="anonymous"></script>
+                    <script src="js/scripts.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
+                        crossorigin="anonymous"></script>
+                    <script src="assets/demo/chart-area-demo.js"></script>
+                    <script src="assets/demo/chart-bar-demo.js"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
+                        crossorigin="anonymous"></script>
+                    <script src="js/datatables-simple-demo.js"></script>
+</body>
+
+</html>

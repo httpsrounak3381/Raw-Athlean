@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Form</title>
+</head>
+<style>
+    h1 {
+        color: #ffffff8f;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    input {
+        background-color: whitesmoke;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+
+    body {
+        background-image: url('https://static.vecteezy.com/system/resources/thumbnails/002/029/070/small/man-holding-a-dumbbell-in-a-gym-with-row-of-dumbbells-in-the-background-free-photo.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        color: #001310c4;
+    }
+
+    fieldset {
+        width: 100%;
+        font-size: 25px;
+    }
+
+    .text {
+        font-size: large;
+        width: 35%;
+        border: 2px solid rgb(250, 250, 250);
+        border-radius: 6px;
+        padding: 100px;
+        padding-top: 0%;
+        padding-bottom: 0%;
+        scroll-padding-top: 20px;
+        text-align: left;
+        color: white;
+        padding: 5px 80px;
+        text-align: center;
+        margin-left: 30%;
+    }
+
+    .para5 {
+        color: white;
+        font-size: 200%;
+    }
+    form{
+        text-align: center;
+    }
+</style>
+
+<body>
+    <form action="/formmem/" method="post">
+        {% csrf_token %}
+        <div class="para5">
+            <p>Form Who Apply For Our Membership:-</p>
+        </div>
+        <br>
+        <div class="text">
+            <legend>
+                <h1>RAW ATHLEAN</h1>
+            </legend>
+            <br>
+            Name: <input type="text" name="fname" placeholder="Enter Your First Name">
+            <input type="text" name="lname" placeholder="Enter Your Last Name"> <br> <br>
+            Date Of Birth: <input type="date" name="DOB" id="">
+            <br>
+            <br>
+            Choose your gender:- <br>
+            Male<input type="radio" name="gen" value="male">
+            Female<input type="radio" name="gen" value="female">
+            Other<input type="radio" name="gen" value="other">
+
+            <br>
+            <br>
+
+            Choose your age : <br> <input type="number" name="Age" placeholder="Age" maxlength="100" minlength="16">
+            <br>
+            <br>
+
+            Enter Your Email : <br> <input type="email" name="Email" id="" placeholder="email">
+            <br>
+            <br>
+            Enter your password :- <br> <input type="password" name="Pass" placeholder="password">
+
+            <br>
+            <br>
+            Address: <br> <textarea name="mytext" id="" cols="30" rows="2" placeholder="Enter Your Address"></textarea>
+            <br> <br>
+            <button><input type="reset" value="Reset Now"></button>
+            <button><input type="submit" value="Submit Now"></button>
+            <br>
+            <br>
+        </div>
+    </form>
+</body>
+</html>

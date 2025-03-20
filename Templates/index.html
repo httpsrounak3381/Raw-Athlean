@@ -1,0 +1,343 @@
+{% include 'menu.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+    body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.83);
+    }
+    .carousel-inner img {
+        height: 1050px;
+    }
+
+    .content1 {
+        width: 36%;
+        position: absolute;
+        top: 200px;
+        color: white;
+        transform: Y(100px);
+        animation: textup 10s linear infinite;
+    }
+
+    @keyframes textup {
+        10% {
+            transform: translateY(150px);
+        }
+
+        100% {
+            transform: translateY(150px);
+        }
+    }
+
+    .content h2 {
+        font-weight: 100;
+    }
+
+    .content h1 {
+        font-size: 50px;
+        text-decoration: none;
+    }
+
+    .content h3 {
+        font-weight: 100;
+    }
+
+    .para {
+        font-size: 80px;
+        text-align: center;
+        font-weight: bold;
+        background-color: rgb(0 0 0 / 83%);
+        color: white;
+        margin-bottom: 0px;
+    }
+
+    .span {
+        font-size: 30px;
+        padding: 0px 200px;
+        text-align: center;
+        background-color: rgb(0 0 0 / 83%);
+        color: white;
+        margin-top: -16px;
+    }
+
+    .raw img {
+        width: 65%;
+        box-shadow: 0px 25px 30px -10px rgba(182, 182, 182, 0.15);
+    }
+
+    .new {
+        border: 2px solid white;
+        margin-top: 5px;
+    }
+
+    .para2 {
+        font-size: 80px;
+        text-align: center;
+        font-weight: bold;
+        background-color: rgb(0 0 0 / 83%);
+        color: white;
+        margin-bottom: 0px;
+    }
+
+    .span3 {
+        justify-content: space-around;
+        align-items: center;
+        min-height: 10vh;
+        background-color: rgb(0 0 0 / 83%);
+        font-family: "Montserrat", sans-serif;
+        color: white;
+        padding: 8px 337px;
+    }
+
+    .span3 li {
+        list-style: none;
+    }
+
+    .span3 ul {
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+    }
+
+    .span3 ul li a {
+        color: white;
+        text-decoration: none;
+        letter-spacing: 3px;
+        font-size: 20px;
+        padding: 14px 16px;
+    }
+
+    .span4 {
+        justify-content: space-around;
+        align-items: center;
+        min-height: 10vh;
+        background-color: rgb(0 0 0 / 83%);
+        font-family: "Montserrat", sans-serif;
+        color: white;
+        padding: 8px 337px;
+    }
+
+    .span4 li {
+        list-style: none;
+    }
+
+    .span4 ul {
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+    }
+
+    .span4 ul li a {
+        color: white;
+        text-decoration: none;
+        letter-spacing: 3px;
+        font-size: 20px;
+        padding: 14px 16px;
+    }
+
+    .span5 {
+        justify-content: space-around;
+        align-items: center;
+        min-height: 10vh;
+        background-color: rgb(0 0 0 / 83%);
+        font-family: "Montserrat", sans-serif;
+        color: white;
+        padding: 8px 337px;
+    }
+
+    .span5 li {
+        list-style: none;
+    }
+
+    .span5 ul {
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+    }
+
+    .span5 ul li a {
+        color: white;
+        text-decoration: none;
+        letter-spacing: 3px;
+        font-size: 20px;
+        padding: 14px 16px;
+    }
+
+    .container {
+        margin-top: 10px;
+    }
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    .container2{
+        background-color: #1e1e1e;
+        height: 60vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cards{
+        border: 2px solid white;
+        background-color: white;
+        border-radius: 30px;
+        height: 50vh;
+        width: 16%;
+        padding: 1.5rem;
+        font-family: 'Bebas Neue', sans-serif;
+    }
+    .two_card{
+        margin-right: 5rem;
+    }
+    .heading1{
+        font-size: 2.5rem;
+        line-height: 60px;
+        margin-bottom: 1rem;
+    }
+    .para1{
+        font-size: 1.6rem;
+        font-weight: none;
+        margin-bottom: 1rem;
+    }
+</style>
+<nav>
+    <div class="heading">
+        <h2>Raw Athlean</h2>
+    </div>
+    <ul class="nav-links">
+        <li><a class="active" href="">Home</a></li>
+        <li><a href="/training">Training</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/shop">Shop</a></li>
+        <li><a href="/register">Register</a></li>
+    </ul>
+</nav>
+<body>
+    
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://cdn.pixabay.com/photo/2021/11/10/06/23/workout-6783020_1280.jpg" class="d-block w-100"
+                    alt="...">
+                <div class="content content1">
+                    <h2>Raw Athlean</h2>
+                    <hr>
+                    <h1>"Nothing will work<BR>Unless you do"</h1>
+                    <hr>
+                    <h3>Strong, is the New Skinny..</h3>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://cdn.pixabay.com/photo/2022/05/16/14/44/woman-7200524_1280.jpg" class="d-block w-100"
+                    alt="...">
+                <div class="content content1">
+                    <h2>Raw Athlean</h2>
+                    <hr>
+                    <h1>"Stop Thinking<BR>Start Doing"</h1>
+                    <hr>
+                    <h3>Time to Change Yourself..</h3>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://cdn.pixabay.com/photo/2021/10/02/07/05/man-6674391_1280.jpg" class="d-block w-100"
+                    alt="...">
+                <div class="content content1">
+                    <h2>Raw Athlean</h2>
+                    <hr>
+                    <hr>
+                    <h1>"Nothing is Over<BR>Until you Stop Trying"</h1>
+                    <h3>You are Worth it..Keep Going..</h3>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="para">
+        <p>Raw Athlean</p>
+    </div>
+    <div class="span">
+        <p></p>Raw Athlean is the vision of a Master Personal Trainer with over 25 years experience in the fitness
+        industry.
+        Raw Athlean now has its first large commercial location to offer several styles of personal training to our
+        clients.
+        <br><br>
+        Monitoring performance during the one-hour workout, from wearable devices to projection screens, which help in
+        getting solidity from long slogans on cardio devices, make use of modern technology to enhance the experience of
+        today's gym exercise.
+        </p>
+        <div class="raw">
+            <img
+                src="https://media.blogto.com/articles/20210221-KXCoffeeGym29.jpg?w=2048&cmd=resize_then_crop&height=1365&quality=70">
+        </div>
+        <br>
+    </div>
+    <div class="para2">
+        <p>OUR RATES</p>
+    </div>
+    <div class="container2">
+        <div class="cards two_card">
+            <p class="heading1">Membership Packages</p>
+            <p class="para1">12 months 33,000rs</p>
+            <p class="para1">6 months 16,500rs</p>
+            <p class="para1">3 months 8,500rs</p>
+            <p class="para1">1 months 3,000rs</p>
+        </div>
+        <div class="cards two_card">
+            <p class="heading1">Monthly Membership</p>
+            <p class="para1">Monthly 3000rs</p>
+            <p class="para1">Day pass 150rs</p>
+            <p class="para1">1 week pass 1,000rs</p>
+            <p class="para1">2 week pass 1,900rs</p>
+        </div>
+        <div class="cards">
+            <p class="heading1">Personal Training</p>
+            <p class="para1">6 sessions 800rs per session</p>
+            <p class="para1">12 sessions 1500rs per session</p>
+            <p class="para1">24 sessions 2800rs per session</p>
+        </div>
+    </div>
+    </div>
+    <br>
+
+    <hr class="new">
+    {% include 'footer.html' %}
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
