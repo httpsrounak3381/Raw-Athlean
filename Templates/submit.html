@@ -4,38 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>submit</title>
-</head>
-
-<body>
+    <title>Thank You</title>
     <style>
-        h1 {
-            text-align: center;
-            color: white;
-            font-size: 600%;
-            margin-top: 400px;
-            font-family: 'Times New Roman', Times, serif;
-        }
-
+        /* Background Styling */
         body {
             background-image: url("https://wallpapers.com/images/hd/woman-showing-gym-abs-9pspfxsgjbtlocv6.jpg");
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+            color: white;
+            font-family: 'Arial', sans-serif;
         }
 
-        button {
-            font-size: 150%;
-            margin-left: 45%;
-            background-color: rgb(161, 155, 155) margin
+        /* Dark Overlay */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 0;
         }
 
-        a {
+        /* Main Content */
+        .content {
+            position: relative;
+            text-align: center;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            font-size: 1.5rem;
+            padding: 15px 30px;
+            background: #ff9800;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            transition: 0.3s;
+            cursor: pointer;
             text-decoration: none;
-            color: black;
+            font-weight: bold;
+            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn:hover {
+            background: #e68900;
+            transform: scale(1.1);
         }
     </style>
+</head>
+
+<body>
+    <div class="content">
+        <h1>Thanks for Registering!</h1>
+        <a href="/" class="btn">Back to Home</a>
+    </div>
 </body>
-<h1> Thanks For Register !</h1>
-<button><a href="/">Back to HOME</a></button>
+
 </html>
