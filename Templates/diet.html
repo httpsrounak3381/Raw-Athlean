@@ -103,6 +103,65 @@ th {
         text-align: center;
         margin-top: 20px;
     }
+
+    body {
+        background-color: rgba(34, 32, 32, 0.778);
+        background-image: url(https://png.pngtree.com/background/20230610/original/pngtree-the-gym-scene-where-people-are-sitting-in-a-gym-picture-image_3108802.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .table-container {
+    overflow-x: auto;
+    margin: 20px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+}
+
+th {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: white;
+    font-size: 1.3rem;
+}
+
+td {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+tr:nth-child(even) td {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+tr:hover td {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.02);
+}
+
     </style>
 </head>
 <body>
@@ -137,39 +196,83 @@ th {
             </ul>
         </div>
         <div id="layoutSidenav_content">
-            <main>
+            <main class="main">
                 <div class="container-fluid px-4"
                     style="color: white; font-family: 'Times New Roman', Times, serif; text-align: center;">
                     <u>
                         <h1 class="mt-4">RAW ATHLEAN</h1>
                     </u>
-                    <br><br>
-                    <table border="1" width="100%">
-                        <thead>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>DOB</th>
-                            <th>Gender</th>
-                            <th>PayMethod</th>
-                            <th>Payment_Method</th>
-    
-                        </thead>
-    
-                        {% for i in Reg %}
-                        <tr>
-                            <td> {{ i.fname }} </td>
-                            <td> {{ i.lname }} </td>
-                            <td> {{ i.DOB }} </td>
-                            <td> {{ i.gen }} </td>
-                            <td> {{ i.PayMethod }} </td>
-                            <td> {{ i.Payment_Method }} </td>
-                        </tr>
-                        {% endfor %}
-                    </table>
-            
-            </div>
-        </div>
-    </div>
+                </div>
+                <table width="100%" class="table">
+                    <thead>
+                        <th>Days</th>
+                        <th>Breakfast</th>
+                        <th>Morning Snack</th>
+                        <th>Lunch</th>
+                        <th>Evening Snack</th>
+                        <th>Dinner</th>
+                    </thead>
+                    <tr>
+                        <td>Monday</td>
+                        <td>Spinach Smoothie</td>
+                        <td>1 Fruit of your choice</td>
+                        <td>1 Cup rice, 1 Cup chicken curry,boiled spinach,fresh salad</td>
+                        <td>Tea and whole wheat crackers or 2 Biscuits that are low in sugar</td>
+                        <td>2 Rotis or 1 Cup of cooked millet, 1 Cup dal or egg curry, 1 Cup raw salad</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>Idli or Vegetable Upma</td>
+                        <td>1 Fruit and a handful of nuts like almonds, walnuts,cashews</td>
+                        <td>2 Rotis, 1 Cups Vegetable subzi of your choice, fresh salad, 1 Cup dal or 1 Piece grilled
+                            chicken breast</td>
+                        <td>1 Whole wheat bread toast with peaunt butter. sprinkle chia seeds on top</td>
+                        <td>2 Wheat rotis or jowar rotis, 1 cup subzi of your choice, 1 boiled egg, 1Cup chicken salad
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>Poha with 1 Cup curd</td>
+                        <td>1 Fruit of your choice</td>
+                        <td>2 Rotis, 1 Piece pan seared chicken thigh, 1 Cup subzi of your choice, fresh salad</td>
+                        <td>Tea and a handful of roasted makhana or fox nuts</td>
+                        <td>1 Cup broccoli soup with 1 whole bread toast</td>
+                    </tr>
+                    <tr>
+                        <td>Thusday</td>
+                        <td>2 Whole wheat bread toasted, 2 Eggs for scrambled eggs or a mushroom stuffed omelette</td>
+                        <td>1 Fruit of your choice with a handful of nuts</td>
+                        <td>1 Cup rice, 1 Cup egg or chicken curry or dal, fresh salad</td>
+                        <td>Tea and a handful of nuts and seeds</td>
+                        <td>1 Cup of cooked millets or brown rice , 1 Cup dal, 1 Cup raw salad</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>Oats and apple pancakes</td>
+                        <td>1 Fruits of your choice</td>
+                        <td>1 Cup rice with 1 Cup steamed spinach, 1 Cup chicken curry and 1 Cup of fresh salad</td>
+                        <td>Tea/coofee and a handful of roasted makhana or fox nuts</td>
+                        <td>1 Cup chickpea salad, Or 1 Grilled fish or chicken with grilled Vegetables like broccoli and
+                            carrots on the side</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>Masala Oats with a fried egg on top</td>
+                        <td>A handful of nuts and seeds. or 1 Fruits of your choice</td>
+                        <td>2 Rotis, 1 Piece grilled fish or chicken, 1 Cup subzi of your choice, 1 Cup raw salad</td>
+                        <td>Tea/coffee with whole wheat crackers. Or 1 fruits of your choice. Or 1 Whole wheat bread
+                            toast with peanut butter. Sprinkle chai seeds on top</td>
+                        <td>1 Cup Masal Macarani with 1 Cup rawsalad on the side. Or 1 Cup Dal khichdi</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>2 Dosas with peanut chutney and 1 Cup vegetable sambar</td>
+                        <td>A handful of nuts and seeds. or 1 Fruits of your choice</td>
+                        <td>1 Cup brown rice chicken biriyani with cucumber raita and 1 Cup of fresh salad</td>
+                        <td>Tea/coffee with whole wheat crackers. Or 1 Fruits of your choice. Or 1 Whole wheat bread
+                            toast with peanut butter. Sprinkle chai seeds on top</td>
+                        <td>2 Rotis. 1 Cup dal or egg curry. 1 Cup subzzi of your choice. 1 Cup of raw salad</td>
+                    </tr>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

@@ -183,26 +183,36 @@
         padding: 0px;
         box-sizing: border-box;
     }
-    .container2{
-        background-color: #1e1e1e;
-        height: 60vh;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .cards{
-        border: 2px solid white;
-        background-color: white;
-        border-radius: 30px;
-        height: 50vh;
-        width: 16%;
-        padding: 1.5rem;
-        font-family: 'Bebas Neue', sans-serif;
-    }
-    .two_card{
-        margin-right: 5rem;
-    }
+    .container2 {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 50px 0;
+        }
+
+        .cards {
+            background: linear-gradient(145deg, #222, #000);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .cards:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 20px rgba(255, 77, 0, 0.5);
+        }
+
+        .heading1 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ddd;
+        }
+
+        .para1 {
+            font-size: 1.2rem;
+            color: #ddd;
+        }
     .heading1{
         font-size: 2.5rem;
         line-height: 60px;
@@ -298,34 +308,29 @@
         </p>
         <div class="raw">
             <img
-                src="https://media.blogto.com/articles/20210221-KXCoffeeGym29.jpg?w=2048&cmd=resize_then_crop&height=1365&quality=70">
+                src="https://cdn.pixabay.com/photo/2016/06/12/20/15/sports-1452965_1280.jpg">
         </div>
         <br>
     </div>
     <div class="para2">
         <p>OUR RATES</p>
     </div>
-    <div class="container2">
-        <div class="cards two_card">
+    <section class="container2">
+        <div class="cards">
             <p class="heading1">Membership Packages</p>
-            <p class="para1">12 months 33,000rs</p>
-            <p class="para1">6 months 16,500rs</p>
-            <p class="para1">3 months 8,500rs</p>
-            <p class="para1">1 months 3,000rs</p>
-        </div>
-        <div class="cards two_card">
-            <p class="heading1">Monthly Membership</p>
-            <p class="para1">Monthly 3000rs</p>
-            <p class="para1">Day pass 150rs</p>
-            <p class="para1">1 week pass 1,000rs</p>
-            <p class="para1">2 week pass 1,900rs</p>
+            <p class="para1">12 months - ₹33,000</p>
+            <p class="para1">6 months - ₹16,500</p>
+            <p class="para1">3 months - ₹8,500</p>
+            <p class="para1">1 month - ₹3,000</p>
         </div>
         <div class="cards">
             <p class="heading1">Personal Training</p>
-            <p class="para1">6 sessions 800rs per session</p>
-            <p class="para1">12 sessions 1500rs per session</p>
-            <p class="para1">24 sessions 2800rs per session</p>
+            <p class="para1">6 sessions - ₹800/session</p>
+            <p class="para1">12 sessions - ₹1,500/session</p>
+            <p class="para1">24 sessions - ₹2,800/session</p>
         </div>
+    </section>
+
     </div>
     </div>
     <br>

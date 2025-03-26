@@ -13,201 +13,99 @@
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <style>
-    html {
-        height: 100vh;
-    }
+html, body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.83);
+    font-family: Arial, sans-serif;
+}
 
-    body {
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
-        background-color: rgb(0 0 0 / 83%);
-    }
+/* Centered Image Banner */
+.center img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
 
-    .center img {
-        width: 100%;
-        height: 950px;
-    }
+/* Main Heading */
+.info {
+    text-align: center;
+    color: white;
+    margin-top: -300px;
+}
 
-    .info {
-        margin-top: -650px;
-        text-align: center;
-        color: white;
-    }
+h1 {
+    font-size: 70px;
+    font-family: 'Bebas Neue', sans-serif;
+}
 
+/* Subtitle */
+.left h4 {
+    color: white;
+    font-size: 30px;
+    margin-top: 807px;
+    margin-left: 810px;
+}
+
+/* Grid Layout for Cards */
+.card_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 68px;
+    padding: 256px;
+    justify-content: center;
+}
+
+/* Styling for Individual Cards */
+.card_container .card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.card .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.card .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .info h1 {
+        font-size: 50px;
+    }
     .left h4 {
-        color: white;
-        text-align: center;
-        font-size: 30px;
-        margin-left: 730px;
-        margin-top: 550px;
-
+        font-size: 24px;
     }
-
-    h1 {
-        font-size: 70px;
-        font-family: 'Bebas Neue', display;
-    }
-
-    .card1 {
-        margin: 610px 100px;
-    }
-
-    .card-title1 {
-        background-color: white;
-    }
-
-    .card2 {
-        margin: -1050px 500px;
-    }
-
-    .card-title2 {
-        background-color: white;
-    }
-
-    .card3 {
-        margin: 540px 900px;
-    }
-
-    .card-title3 {
-        background-color: white;
-    }
-
-    .card4 {
-        margin: -1010px 1300px;
-    }
-
-    .card-title4 {
-        background-color: white;
-    }
-
-    .card5 {
-        margin: 1100px 100px;
-    }
-
-    .card-title5 {
-        background-color: white;
-    }
-
-    .card6 {
-        margin: -1550px 500px;
-    }
-
-    .card-title6 {
-        background-color: white;
-    }
-
-    .card7 {
-        margin: 1000px 900px;
-    }
-
-    .card-title7 {
-        background-color: white;
-    }
-
-    .card8 {
-        margin: -1430px 1300px;
-    }
-
-    .card-title8 {
-        background-color: white;
-    }
-
-    .card9 {
-        margin: 1600px 100px;
-    }
-
-    .card-title9 {
-        background-color: white;
-    }
-
-    .card10 {
-        margin: -2050px 500px;
-    }
-
-    .card-title10 {
-        background-color: white;
-    }
-
-    .card11 {
-        margin: 1650px 900px;
-    }
-
-    .card-title11 {
-        background-color: white;
-    }
-
-    /* .footer {
-        background-color: rgb(0 0 0 / 83%);
-        /* margin-top: 100px;
-        width: 705%;
-        margin-left: -313%;
-    }
-
-    ul {
-        list-style: none;
-    }
-
-    .footer-col {
-        width: 30%;
-        padding: 0px 148px;
-        margin: 26px 3px;
-
-    }
-
-    .row {
-        display: flex;
-        flex-wrap: nowrap;
-    }
-
-    .footer-col h4 {
-        font-size: 18px;
-        color: white;
-        text-transform: capitalize;
-        position: relative;
-    }
-
-    .footer-col ul li {
-        margin-bottom: 0px;
-    }
-
-    .footer-col ul li a {
-        font-size: 16px;
-        text-transform: capitalize;
-        text-decoration: none;
-        font-weight: 300;
-        display: block;
-        color: white;
-        transition: all 0.5s ease;
-    }
-
-    .footer-col ul li a :hover {
-        padding-left: 10px;
-    }
-
-    .footer-col .social-links a {
-        display: inline-block;
-        height: 40px;
-        width: 40px;
-        margin-right: 10px;
-        line-height: 40px;
-    }
-
-    #jk {
-        width: 100px;
-        height: 100px;
-        margin-top: -305px;
-        margin-left: 80px;
-        margin-right: 0px;
-    }
-
-    #name {
-        margin-top: -90px;
-        margin-left: 80px;
-        margin-right: 0px;
-        color: white;
-    } */
-
+}
     .footer {
     background-color: rgba(0, 0, 0, 0.83);
     padding: 17px 0px;
@@ -218,70 +116,6 @@ ul {
     list-style: none;
 }
 
-.footer-col {
-    width: 25%;
-    padding: 0 3px;
-    padding-left: 180px;
-    margin: 0px 0px;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.footer-col h4 {
-    font-size: 18px;
-    color: rgb(255, 255, 255);
-    text-transform: capitalize;
-    margin-bottom: 35px;
-    position: relative;
-}
-
-.footer-col ul li {
-    margin-bottom: 10px;
-}
-
-.footer-col ul li a {
-    font-size: 16px;
-    text-transform: capitalize;
-    text-decoration: none;
-    font-weight: 300;
-    display: block;
-    color: rgb(255, 255, 255);
-    transition: all 0.5s ease;
-}
-
-.footer-col ul li a :hover {
-    padding-left: 10px;
-}
-
-.footer-col .social-links a {
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    margin-right: 10px;
-    line-height: 40px;
-}
-
-#jk {
-    width: 100px;
-    height: 100px;
-    margin-top: -185px;
-    margin-left: 80px;
-    margin-right: 0px;
-}
-
-#name {
-    margin-top: -70px;
-    margin-left: 80px;
-    margin-right: 0px;
-    color: white;
-}
-
-    .card_container {
-        padding-left: 10rem;
-    }
 </style>
 
 <body>
@@ -419,109 +253,10 @@ ul {
                 <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
         </div>
-        <div class="card11" style="width: 18rem;">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRztMtG20GWYTtk3PO98xBi_nvZi1wfGphLyw&usqp=CAU"
-                class="card-img-top" alt="...">
-            <div class="card-body11">
-                <h5 class="card-title11">TRUE INDIAN Hand Grip For Gym Hand Gripper For Men Women Forearm Hand
-                    Grip/Fitness
-                    Grip Hand Grip/Fitness Grip
-                    <br><br>
-                    350rs
-                </h5>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
+        
         </div>
     </div>
-    <!-- <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col">
-                    <h4>COMPANY</h4>
-                    <ul>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Our services</a></li>
-                        <li><a href="#">Privacy policy</a></li>
-                        <li><a href="#">Membership</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>GET HELP</h4>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#"></a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>ONLINE SHOP</h4>
-                    <ul>
-                        <li><a href="#">Shipping</a></li>
-                        <li><a href="#">Returns</a></li>
-                        <li><a href="#">Order status</a></li>
-                        <li><a href="#">Payment options</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <div class="social-links">
-                        <h4>FOLOW US</h4>
-                    </div>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <img id="jk"
-            src="https://play-lh.googleusercontent.com/Oz7RMqxhjiI-KlMYUqf50Fs3fkpzulD_jyb6qXN_ePM_xQcx1_3PaCgVGI9Q4d47TRQ">
-        <div id="name">
-            RAW ATHLEAN
-        </div>
-    </footer> -->
-
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col">
-                    <h4>COMPANY</h4>
-                    <ul>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Our services</a></li>
-                        <li><a href="#">Privacy policy</a></li>
-                        <li><a href="#">Membership</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>GET HELP</h4>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#"></a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>ONLINE SHOP</h4>
-                    <ul>
-                        <li><a href="#">Shipping</a></li>
-                        <li><a href="#">Returns</a></li>
-                        <li><a href="#">Order status</a></li>
-                        <li><a href="#">Payment options</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <div class="social-links">
-                        <h4>FOLOW US</h4>
-                    </div>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <img id="jk"
-            src="https://play-lh.googleusercontent.com/Oz7RMqxhjiI-KlMYUqf50Fs3fkpzulD_jyb6qXN_ePM_xQcx1_3PaCgVGI9Q4d47TRQ">
-        <div id="name">
-            RAW ATHLEAN </div>
-    </footer>
-
+    {% include 'footer.html' %}
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
